@@ -9,10 +9,8 @@ use Illuminate\Notifications\Notifiable;
 
 class Admin extends Authenticatable
 {
-    protected $table = 'admins';
-    protected $fillable = [
-        'name', 'email','photo','password','created_at','updated_at',
-    ];
-    public $timestamps =true;
+    protected $table ="admins";
+    protected $guarded=[];
+    public $timestamps = true;
 
 }
