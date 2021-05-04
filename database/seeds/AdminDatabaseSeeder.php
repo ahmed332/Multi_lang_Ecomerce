@@ -1,0 +1,22 @@
+<?php
+
+use App\Models\Admin;
+use Illuminate\Database\Seeder;
+
+class AdminDatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+         Admin::create([
+              'name'  => 'Ahmed',
+              'email'  => 'ahmed.monsef.@gmail.com',
+              'password'  => bcrypt('12345678'),
+
+         ]);
+    }
+}
