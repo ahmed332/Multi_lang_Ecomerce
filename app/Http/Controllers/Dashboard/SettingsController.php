@@ -14,7 +14,7 @@ class SettingsController extends Controller
 {
     public function editShippingMethods($type){
         if ($type === 'free')
-         $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
+          $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
 
 
     elseif ($type === 'inner')
