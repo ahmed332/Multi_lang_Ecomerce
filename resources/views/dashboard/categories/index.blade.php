@@ -149,6 +149,8 @@
                                                 <thead class="">
                                                 <tr>
                                                     <th>الاسم </th>
+                                                    <th>الصسم الراءيسي </th>
+
                                                     <th> الاسم بالرابط </th>
                                                     <th>الحالة</th>
                                                     <th>صوره القسم</th>
@@ -161,6 +163,7 @@
                                                     @foreach($categories as $category)
                                                         <tr>
                                                             <td>{{$category -> name}}</td>
+                                                            <td>{{$category -> _parent -> name  ?? '--' }}</td>
                                                             <td>{{$category -> slug}}</td>
                                                             <td>{{$category -> getActive()}}</td>
                                                             <td> <img style="width: 150px; height: 100px;" src=" "></td>

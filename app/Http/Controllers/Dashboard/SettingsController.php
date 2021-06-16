@@ -14,7 +14,7 @@ class SettingsController extends Controller
 {
     public function editShippingMethods($type){
         if ($type === 'free')
-          $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
+        return   $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
 
 
     elseif ($type === 'inner')
@@ -48,8 +48,8 @@ class SettingsController extends Controller
             DB::rollback();
         }
 
-        
-          
+
+
 
 
 

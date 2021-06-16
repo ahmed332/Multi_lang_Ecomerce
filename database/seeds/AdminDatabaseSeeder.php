@@ -14,7 +14,7 @@ class AdminDatabaseSeeder extends Seeder
     {
          Admin::create([
               'name'  => 'Ahmed',
-              'email'  => 'ahmed.monsef.@gmail.com',
+              'email'  => 'ahmed.monsef@gmail.com',
               'password'  => bcrypt('12345678'),
 
          ]);

@@ -55,7 +55,21 @@ class Category extends Model
     }
 
     public function _parent(){
-        return $this->belongsTo(self::class, 'parent_id');
+
+        return $this->belongsTo(self::class,'parent_id');
+    }
+     public function products()
+    {
+        return $this -> belongsToMany(Product::class,'product_categories');
+    }
+    public function scopeActive($query){
+        return $query -> where('is_active',1) ;
+    }
+    public function children(){
+        return $this->hasMany(self::class,'parent_id');
+    }
+    public function image(){
+        return $this->hasMany(Image::class,'product_id');
     }
 
 }
